@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class StackCalculatorApp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -7,9 +9,9 @@ public class StackCalculatorApp {
         
         while (true) {
             System.out.print("Enter command: ");
-            String input = scanner.nextLine();
-            String[] parts = input.split(" ");
-            String command = parts[0];
+            String input = scanner.nextLine().trim();
+            String[] parts = input.split("\\s+");
+            String command = parts[0].toLowerCase();
 
             switch (command) {
                 case "push":
@@ -46,3 +48,4 @@ public class StackCalculatorApp {
         }
     }
 }
+
